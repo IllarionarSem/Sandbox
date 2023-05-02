@@ -4,50 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5f28226-9729-4a79-a3e8-52271451d370" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/AppModule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/Browser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/steam/page/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/steam/page/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/steam/page/GamePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/steam/page/LandingPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/steam/page/SearchResultPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/steam/page/form/CartItemListForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/steam/page/form/ItemList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/steam/page/form/NavigationBarForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/steam/page/form/PurchaseForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/steam/page/form/SearchResultListForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/configuration/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/driver/ChromeDriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/driver/DriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/driver/DriverManagerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/driver/DriverSettings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/driver/DriverType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/driver/FireFoxDriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/element/ElemStateValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/element/Interact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/element/JsExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/testcontext/TestContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/DataReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/FileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/global_config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/javascript.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/assertions/CustomAssertion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dataprovider/DataSetProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/listeners/TestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/SearchItemSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/SteamCartTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/multipleItem.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/singleItem.json" afterDir="false" />
+    <list default="true" id="d5f28226-9729-4a79-a3e8-52271451d370" name="Changes" comment="created">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/driver/ChromeDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/driver/ChromeDriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/element/ElemStateValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/element/ElemStateValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/element/Interact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/element/Interact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/testcontext/TestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testcontext/TestContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +144,14 @@
       <option name="presentableId" value="Default" />
       <updated>1682601991740</updated>
     </task>
+    <task id="LOCAL-00001" summary="created">
+      <created>1683032739547</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683032739547</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,5 +164,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="created" />
+    <option name="LAST_COMMIT_MESSAGE" value="created" />
   </component>
 </project>

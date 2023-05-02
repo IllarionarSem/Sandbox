@@ -8,6 +8,7 @@ import element.ElemStateValidation;
 import element.Interact;
 import element.JsExecutor;
 import org.aeonbits.owner.ConfigFactory;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 

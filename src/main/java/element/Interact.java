@@ -12,9 +12,7 @@ import static testcontext.TestContext.*;
 public class Interact {
     public void clickOn(WebElement element) {
         log.info("Click on element");
-        getElemStateValidations().performWait(element,
-                getElemStateValidations().toBeVisible,
-                getElemStateValidations().toBeClickable);
+        getElemStateValidations().performWait(element, ElemStateValidation.State.BEFORE_CLICK);
         getJsExecutor().click(element);
     }
 
@@ -27,15 +25,12 @@ public class Interact {
     }
 
     public void clearAndType(WebElement element, String text) {
-        getElemStateValidations().performWait(element,
-                getElemStateValidations().toBeVisible,
-                getElemStateValidations().toBeClickable);
+        getElemStateValidations().performWait(element, ElemStateValidation.State.BEFORE_TYPE);
         getJsExecutor().clearAndType(element, text);
     }
 
     public String getText(WebElement element) {
-        getElemStateValidations().performWait(element,
-                getElemStateValidations().toBeVisible);
+        getElemStateValidations().performWait(element,ElemStateValidation.State.BEFORE_EXTRACT_TEXT);
         return getJsExecutor().getText(element);
     }
 

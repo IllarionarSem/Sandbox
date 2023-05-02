@@ -15,7 +15,6 @@ public class ChromeDriverManager extends DriverManager<ChromeOptions> {
 
     @Override
     public WebDriver createLocalDriver() {
-        WebDriverManager.chromedriver().setup();
         return new ChromeDriver(getCapabilities());
     }
 
