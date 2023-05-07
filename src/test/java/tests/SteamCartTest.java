@@ -18,7 +18,6 @@ import static assertions.CustomAssertion.assertEquals;
 @Feature("Cart Tests")
 public class SteamCartTest extends BaseTest {
 
-    private LandingPage landingPage = new LandingPage();
     private SearchItemSteps searchItemSteps = new SearchItemSteps();
 
     @Test(dataProviderClass = DataSetProvider.class,

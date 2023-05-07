@@ -1,12 +1,10 @@
 package driver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,7 +12,7 @@ import java.util.Map;
 public class ChromeDriverManager extends DriverManager<ChromeOptions> {
 
     @Override
-    public WebDriver createLocalDriver() {
+    protected WebDriver createLocalDriver() {
         return new ChromeDriver(getCapabilities());
     }
 
@@ -26,7 +24,7 @@ public class ChromeDriverManager extends DriverManager<ChromeOptions> {
         prefs.put("safebrowsing.enabled", "true");
         prefs.put("intl.accept_languages", "en");
         chromeOptions.setExperimentalOption("prefs", prefs);
-        chromeOptions.addArguments("--remote-allow-origins=*");
+        chromeOptions.addArguments("--remote-allow-origins=*", "--headless=new");
         return chromeOptions;
     }
 }

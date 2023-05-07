@@ -30,7 +30,7 @@ public class ElemStateValidation {
 
     public Consumer<WebElement> toBeClickable = element -> getConditionalWait().until(ExpectedConditions.elementToBeClickable(element));
 
-    public final void performWait(WebElement element, State states) {
+    public void performWait(WebElement element, State states) {
         performWait(element, states.consumers);
     }
 

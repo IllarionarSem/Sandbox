@@ -1,14 +1,12 @@
 package testcontext;
 
-import app.Browser;
+import browser.Browser;
 import configuration.Config;
 import driver.DriverManagerFactory;
-import driver.DriverType;
 import element.ElemStateValidation;
 import element.Interact;
 import element.JsExecutor;
 import org.aeonbits.owner.ConfigFactory;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,17 +23,14 @@ public class TestContext {
     private final Actions actions;
 
     public static TestContext getInstance() {
-        if (INSTANCE_CONTAINER.get() == null) {
-            INSTANCE_CONTAINER.set(new TestContext());
-        }
         return INSTANCE_CONTAINER.get();
     }
 
     private TestContext() {
         this.browser = new Browser(DriverManagerFactory.getManager(config.browserType()).getDriver());
-        this.webDriverWait = new WebDriverWait(browser.getDriver(), Duration.ofSeconds(10));
+        this.webDriverWait = new WebDriverWait(browser.getDriver(), Duration.ofSeconds(config.timeOut()));
         this.elemStateValidation = new ElemStateValidation();
-        this.jsExecutor = new JsExecutor(browser.getDriver());
+        this.jsExecutor = new JsExecutor();
         this.actions = new Actions(browser.getDriver());
         this.interact = new Interact();
     }
@@ -58,5 +53,9 @@ public class TestContext {
 
     public static WebDriverWait getConditionalWait() {
         return getInstance().webDriverWait;
+    }
+
+    public static Actions getActions() {
+        return getInstance().actions;
     }
 }

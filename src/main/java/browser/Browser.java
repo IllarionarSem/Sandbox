@@ -1,4 +1,4 @@
-package app;
+package browser;
 
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.OutputType;
@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 @Log4j2
 public class Browser {
-    private final WebDriver driver;
+    private WebDriver driver;
 
     public Browser(WebDriver driver) {
         this.driver = driver;
@@ -29,8 +29,12 @@ public class Browser {
     public void quit() {
         log.info("Quit Browser");
         if (getDriver() != null) {
-            getDriver().close();
+            getDriver().quit();
         }
+    }
+
+    public byte[] getScreenshot() {
+        return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
     public WebDriver getDriver() {

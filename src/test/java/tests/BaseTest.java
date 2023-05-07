@@ -9,9 +9,11 @@ import static testcontext.TestContext.getBrowser;
 
 @Log4j2
 public abstract class BaseTest {
+
+    protected LandingPage landingPage = new LandingPage();
     @BeforeMethod
     public void beforeMethod() {
-        new LandingPage().openPage();
+        landingPage.openPage();
     }
 
     @AfterMethod(alwaysRun = true)

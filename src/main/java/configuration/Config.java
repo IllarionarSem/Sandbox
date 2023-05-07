@@ -3,10 +3,10 @@ package configuration;
 import driver.DriverType;
 
 @org.aeonbits.owner.Config.LoadPolicy(org.aeonbits.owner.Config.LoadType.MERGE)
-@org.aeonbits.owner.Config.Sources({"classpath:global_config.properties", "classpath:javascript.properties"})
+@org.aeonbits.owner.Config.Sources({"file:src/main/resources/${env.properties}.properties",
+        "classpath:javascript.properties"})
 public interface Config extends org.aeonbits.owner.Config {
     @Key("browserType")
-    @DefaultValue("CHROME")
     DriverType browserType();
 
     @Key("execType")
