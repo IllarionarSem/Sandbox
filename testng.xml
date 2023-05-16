@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cart test" parallel="tests">
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+    <test name="Cart test">
+        <classes>
+            <class name="tests.SteamCartTest"/>
+        </classes>
+    </test>
+    <test name="Cart test 2">
+        <classes>
+            <class name="tests.SteamCartTest1"/>
+        </classes>
+    </test>
+</suite>

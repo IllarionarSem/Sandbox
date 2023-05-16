@@ -2,6 +2,7 @@ package testcontext;
 
 import browser.Browser;
 import configuration.Config;
+import driver.DriverManager;
 import driver.DriverManagerFactory;
 import element.ElemStateValidation;
 import element.Interact;
@@ -13,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class TestContext {
-    private Config config = ConfigFactory.create(Config.class);
+    private static Config config = ConfigFactory.create(Config.class);
     private static final ThreadLocal<TestContext> INSTANCE_CONTAINER = ThreadLocal.withInitial(TestContext::new);
     private final Browser browser;
     private final ElemStateValidation elemStateValidation;
@@ -27,11 +28,15 @@ public class TestContext {
     }
 
     private TestContext() {
-        this.browser = new Browser(DriverManagerFactory.getManager(config.browserType()).getDriver());
-        this.webDriverWait = new WebDriverWait(browser.getDriver(), Duration.ofSeconds(config.timeOut()));
+        this(DriverManagerFactory.getManager(config.browserType()));
+    }
+
+    private TestContext(DriverManager<?> driverManager) {
+        this.browser = new Browser(driverManager.getDriver());
+        this.webDriverWait = new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds(config.timeOut()));
         this.elemStateValidation = new ElemStateValidation();
         this.jsExecutor = new JsExecutor();
-        this.actions = new Actions(browser.getDriver());
+        this.actions = new Actions(driverManager.getDriver());
         this.interact = new Interact();
     }
 

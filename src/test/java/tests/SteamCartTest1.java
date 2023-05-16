@@ -1,7 +1,6 @@
 package tests;
 
 import com.steam.page.CartPage;
-import com.steam.page.LandingPage;
 import dataprovider.DataSetProvider;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
@@ -16,7 +15,7 @@ import static assertions.CustomAssertion.assertEquals;
 
 @Epic("Regression tests")
 @Feature("Cart Tests")
-public class SteamCartTest extends BaseTest {
+public class SteamCartTest1 extends BaseTest {
 
     private SearchItemSteps searchItemSteps = new SearchItemSteps();
 
